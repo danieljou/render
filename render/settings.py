@@ -85,7 +85,7 @@ DATABASES = {
     }
 }
 
-
+DATABASES['default'] = dj_database_url.parse('postgres://render_mj7g_user:3f29DkxRE2HZIeltMgYG67H3dj3zQvbJ@dpg-clkrnveaov6s738mt6cg-a.oregon-postgres.render.com/render_mj7g')
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -124,6 +124,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'tools')
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 # STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 # Default primary key field type
