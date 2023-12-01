@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="p-1">
+            <div class="container-fluid px-2 px-md-4">
+                <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+                  <span class="mask  bg-gradient-primary  opacity-6"></span>
+                </div>
+                <div class="card card-body mx-3 mx-md-4 mt-n6">
+                  <div class="row gx-4 mb-2">
+                    <div class="col-auto">
+                      <div class="avatar avatar-xl position-relative bg-primary">
+                        
+                        {% comment %} <img src="../assets/img/bruce-mars.jpg" alt="profile_image" class="w-100 border-radius-lg shadow-sm"> {% endcomment %}
+                      </div>
+                    </div>
+                    <div class="col-auto my-auto">
+                      <div class="h-100">
+                        <h5 class="mb-1">
+                          Envoyer un message grouppé dans
+                        </h5>
+                        <p class="mb-0 font-weight-normal text-sm">
+                         Mainling Pro
+                        </p>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="row">
+                        <form action="">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="border border-radius-lg border-2 p-3">
+                                        <input type="text" class="form-control" placeholder="Titre du mesage" >
+                                    </div>
+
+                                    <div class="border border-radius-lg border-2 p-3 mt-2" >
+                                        <textarea class="form-control" placeholder="Votre message" rows="5" > Votre message </textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary mt-2" >  
+                                        Envoyer le message en masse
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -10,7 +10,18 @@ def index(request):
 
 @login_required
 def home(request):
-    return render(request,'index.html')
+    mails = Contact.objects.exclude(email = ' ' )
+    return render(request,'mail.html', {'mails':mails})
+
+@login_required
+def phone(request):
+    mails = Contact.objects.exclude(tel = "")
+    return render(request,'mail.html', {'mails':mails,'tel':True})
+
+@login_required
+def message(request):
+    mails = Contact.objects.exclude(email = ' ' )
+    return render(request,'send.html', {'mails':mails})
 
 
 
