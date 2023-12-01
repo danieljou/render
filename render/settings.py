@@ -85,7 +85,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] = dj_database_url.parse('postgres://render_mj7g_user:3f29DkxRE2HZIeltMgYG67H3dj3zQvbJ@dpg-clkrnveaov6s738mt6cg-a.oregon-postgres.render.com/render_mj7g')
+DATABASES['default'] = dj_database_url.parse('postgres://render_lcd1_user:H3lJduU6j283VGidsREODfXyoy5Mogls@dpg-cll0svmaov6s73f13b20-a.oregon-postgres.render.com/render_lcd1')
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -143,3 +143,14 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = '/home'
 LOGOUT_REDIRECT_URL = '/'
+
+
+EMAIL_BACKEND  = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER = 'danieltiomelajou@gmail.com'
+EMAIL_HOST_PASSWORD = 'gbjvmcqfscsmznfq'
+
+FRONTEND_URL = 'http://192.168.3.22:3000/'

@@ -28,15 +28,16 @@
                     
                   </div>
                   <div class="row">
-                        <form action="">
+                        <form action="" method="post">
+                          {% csrf_token %}
                             <div class="card">
                                 <div class="card-body">
                                     <div class="border border-radius-lg border-2 p-3">
-                                        <input type="text" class="form-control" placeholder="Titre du mesage" >
+                                        <input type="text" class="form-control" placeholder="Titre du mesage" name="title" >
                                     </div>
 
                                     <div class="border border-radius-lg border-2 p-3 mt-2" >
-                                        <textarea class="form-control" placeholder="Votre message" rows="5" > Votre message </textarea>
+                                        <textarea class="form-control" placeholder="Votre message" rows="5" name="message" > Votre message </textarea>
                                     </div>
                                     <button type="submit" class="btn btn-primary mt-2" >  
                                         Envoyer le message en masse
