@@ -30,7 +30,7 @@ def message(request):
         for item in contacts:
             if item.email != None and item.email not in contacts_list:
                 contacts_list.append(item.email)
-
+            
 
         send_mail(
             subject="Mainling Pro",
@@ -40,6 +40,7 @@ def message(request):
             html_message=messageMail,
             # content_subtype='html'
         )
+        return redirect('message')
     return render(request,'send.html', {'mails':mails})
 
 
