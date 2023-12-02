@@ -2,16 +2,18 @@
 
 {% block content %}
   <div class="container p-3">
-    <h2>Liste des contacts Mails</h2>
-    <table id="myTable" class="table table-triped table-bordered">
+    <div class="card">
+      <div class="card-body">
+        <h2>Liste des contacts Mails</h2>
+    <table id="myTable" class="table table-triped table-bordered table-responsive">
       <thead>
         <tr class="table-header">
-          <td>Nom</td>
-          <td>prenom</td>
-          <td>addresse Mail</td>
+          <td class="p-2" >Nom</td>
+          <td class="p-2" >prenom</td>
+          <td class="p-2" >addresse Mail</td>
           
           {% if tel %}
-          <td>Téléhone</td>
+          <td class="p-2" >Téléhone</td>
           {% endif %}
             
         </tr>
@@ -19,15 +21,17 @@
       <tbody>
         {% for item in mails %}
           <tr>
-            <td>{{ item.nom }}</td>
-            <td>{{ item.prenom }}</td>
-            <td>{{ item.email }}</td>
+            <td class="p-2" >{{ item.nom }}</td>
+            <td class="p-2" >{{ item.prenom }}</td>
+            <td class="p-2" >{{ item.email }}</td>
             {% if tel %}
-          <td>{{ item.tel }}</td>
+          <td class="p-2" >{{ item.tel }}</td>
           {% endif %}
           </tr>
         {% endfor %}
       </tbody>
     </table>
+      </div>
+    </div>
   </div>
 {% endblock %}
